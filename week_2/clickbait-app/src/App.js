@@ -27,7 +27,7 @@ function App() {
     <div className="App" style={centerApp}>
       <h1>Clickbait app</h1>
       {posts.map((el) => (
-        <BlogTile key={el.id} title={el.title} intro={el.intro} />
+        <BlogTile key={el.id} {...el} />
       ))}
     </div>
   );
