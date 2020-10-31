@@ -1,10 +1,12 @@
 import React from "react";
 import "./App.css";
 
+import Button from "./components/Form";
+
 function App() {
   return (
     <div className="App">
-      <h2>button</h2>
+      <Button label="Click" bgColor="darkBlue" color="white" />
     </div>
   );
 }
