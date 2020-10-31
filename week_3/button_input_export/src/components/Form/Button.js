@@ -1,9 +1,10 @@
 import React from "react";
 
-function Button(props) {
-  const { label, bgColor, color } = props;
+export function Button(props) {
+  const { icon, label, bgColor, color } = props;
 
   const styles = {
+    width: "50%",
     backgroundColor: `${bgColor}`,
     color: `${color}`,
     fontSize: 16,
@@ -11,15 +12,21 @@ function Button(props) {
     borderRadius: 5,
     padding: 10,
     letterSpacing: 1,
+    cursor: "pointer",
+    margin: "0 auto",
   };
 
-  return <button style={styles}>{label}</button>;
+  return (
+    <>
+      <button style={styles}>
+        {icon} {label}
+      </button>
+    </>
+  );
 }
 
-Button.propsDefault = {
+Button.defaultProps = {
   label: "click me",
   bgColor: "darkBlue",
   color: "white",
 };
-
-export default Button;
