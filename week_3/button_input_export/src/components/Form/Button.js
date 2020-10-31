@@ -27,6 +27,6 @@ export function Button(props) {
 
 Button.defaultProps = {
   label: "click me",
-  bgColor: "darkBlue",
+  bgColor: "black",
   color: "white",
 };
