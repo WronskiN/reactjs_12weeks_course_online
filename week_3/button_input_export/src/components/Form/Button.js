@@ -17,11 +17,11 @@ export function Button(props) {
   };
 
   return (
-    <>
+    <div>
       <button style={styles}>
         {icon} {label}
       </button>
-    </>
+    </div>
   );
 }
 
