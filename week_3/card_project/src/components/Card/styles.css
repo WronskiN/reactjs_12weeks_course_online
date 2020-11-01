@@ -1,0 +1,61 @@
+.logo {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+h1 {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.titleRow {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.date {
+    color: gray;
+    font-size: 15px;
+}
+
+.iconWrapper {
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.iconWrapper:hover {
+    background-color: rgb(231, 231, 231);
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.widget {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardArticle {
+    display: none;
+    padding: 20px;
+    text-align: left;
+}
+
+.cardArticle p {
+    margin: 20px 0;
+}
