@@ -8,12 +8,13 @@ export const Input = (props) => {
     fontSize: 16,
     border: `${borderSize}px solid ${borderColor}`,
     borderRadius: `${borderRadius}px`,
+    padding: 10,
   };
   return <input style={styles} label="label" />;
 };
 
 Input.defaultProps = {
-  bgColor: "darkBlue",
+  bgColor: "gray",
   color: "white",
   borderSize: 1,
   borderRadius: 5,

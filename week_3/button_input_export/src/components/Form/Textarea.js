@@ -10,13 +10,14 @@ export const Textarea = (props) => {
     margin: "15px 0",
     border: `${borderSize}px solid ${borderColor}`,
     borderRadius: `${borderRadius}px`,
+    padding: 10,
   };
 
   return <textarea style={styles} rows="4" cols="50"></textarea>;
 };
 
 Textarea.defaultProps = {
-  bgColor: "darkBlue",
+  bgColor: "gray",
   color: "white",
   borderSize: 1,
   borderRadius: 5,
