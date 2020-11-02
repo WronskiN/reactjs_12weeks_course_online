@@ -10,8 +10,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 library.add(faEllipsisV, faHeart, faAngleDown, faAngleUp, faShareAlt);
 
-export const heart = <FontAwesomeIcon icon={faHeart} />;
-export const ellipseV = <FontAwesomeIcon icon={faEllipsisV} />;
-export const angleDown = <FontAwesomeIcon icon={faAngleDown} />;
-export const angleUp = <FontAwesomeIcon icon={faAngleUp} />;
-export const shareAlt = <FontAwesomeIcon icon={faShareAlt} />;
+const heart = <FontAwesomeIcon icon={faHeart} />;
+const ellipseV = <FontAwesomeIcon icon={faEllipsisV} />;
+const angleDown = <FontAwesomeIcon icon={faAngleDown} />;
+const angleUp = <FontAwesomeIcon icon={faAngleUp} />;
+const shareAlt = <FontAwesomeIcon icon={faShareAlt} />;
+
+export { heart, ellipseV, angleDown, angleUp, shareAlt };
