@@ -9,6 +9,7 @@ export const Input = (props) => {
     border: `${borderSize}px solid ${borderColor}`,
     borderRadius: `${borderRadius}px`,
     padding: 10,
+    outline: "none",
   };
   return <input style={styles} label="label" />;
 };
