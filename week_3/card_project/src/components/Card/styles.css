@@ -50,12 +50,7 @@ img {
     justify-content: space-between;
 }
 
-.cardArticle {
-    display: none;
-    padding: 20px;
-    text-align: left;
-}
 
-.cardArticle p {
+.paragraph {
     margin: 20px 0;
 }

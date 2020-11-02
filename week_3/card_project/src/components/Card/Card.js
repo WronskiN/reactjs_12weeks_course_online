@@ -1,23 +1,13 @@
 import React, { useState } from "react";
 import { Header, Image, Description, Footer, ExtendContent } from "./elements";
 import "./styles.css";
-import { library } from "@fortawesome/fontawesome-svg-core";
 import {
-  faEllipsisV,
-  faHeart,
-  faAngleDown,
-  faShareAlt,
-  faAngleUp,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-library.add(faEllipsisV, faHeart, faAngleDown, faAngleUp, faShareAlt);
-
-const heart = <FontAwesomeIcon icon={faHeart} />;
-const ellipseV = <FontAwesomeIcon icon={faEllipsisV} />;
-const angleDown = <FontAwesomeIcon icon={faAngleDown} />;
-const angleUp = <FontAwesomeIcon icon={faAngleUp} />;
-const shareAlt = <FontAwesomeIcon icon={faShareAlt} />;
+  heart,
+  ellipseV,
+  angleDown,
+  angleUp,
+  shareAlt,
+} from "./elements/Icons";
 
 const styles = {
   width: 350,
