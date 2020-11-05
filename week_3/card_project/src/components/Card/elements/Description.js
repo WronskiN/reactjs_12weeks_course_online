@@ -7,11 +7,8 @@ const styles = {
   textAlign: "left",
 };
 
-const contentText =
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit.quasi, adipisci, dolore rerum, distinctio molestiae repellat solutaarchitecto nostrum facere? Hic quibusdam asperiores aspernatur";
-
-function Description() {
-  return <div style={styles}>{contentText}</div>;
+function Description({ description }) {
+  return <div style={styles}>{description}</div>;
 }
 
 export { Description };

@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import { Header, Image, Description, Footer, ExtendContent } from "./elements";
 import "./styles.css";
-import {
-  heart,
-  ellipseV,
-  angleDown,
-  angleUp,
-  shareAlt,
-} from "./elements/Icons";
 
 const styles = {
   width: 350,
@@ -21,21 +14,33 @@ const styles = {
   boxShadow: "0 10px 6px -6px #777",
 };
 
-const Card = () => {
+const Card = (props) => {
   const [show, setShow] = useState(false);
+  const {
+    image,
+    date,
+    title,
+    description,
+    paragraph,
+    heart,
+    shareAlt,
+    angleDown,
+    angleUp,
+    ellipseV,
+  } = props;
 
   return (
     <div style={styles}>
-      <Header iconMenu={ellipseV} />
-      <Image />
-      <Description />
+      <Header iconMenu={ellipseV} date={date} title={title} />
+      <Image image={image} />
+      <Description description={description} />
       <Footer
         heart={heart}
         shareAlt={shareAlt}
         angle={!show ? angleDown : angleUp}
         onClick={() => setShow(!show)}
       />
-      {show && <ExtendContent />}
+      {show && <ExtendContent paragraph={paragraph} title={title} />}
     </div>
   );
 };

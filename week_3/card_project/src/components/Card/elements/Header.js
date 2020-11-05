@@ -8,16 +8,14 @@ const styles = {
   padding: 10,
 };
 
-const date = new Date().toDateString();
-
-function Header({ iconMenu }) {
+function Header({ iconMenu, date, title }) {
   return (
     <section style={styles}>
       <div className="logo">
         <h1>R</h1>
       </div>
       <div className="titleRow">
-        <p>Shrimp and Chorizo Paella</p>
+        <p>{title}</p>
         <p className="date">{date}</p>
       </div>
       <div className="iconWrapper">{iconMenu}</div>
