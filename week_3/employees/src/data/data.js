@@ -1,3 +1,7 @@
+import dennis from "./images/dennis.jpg";
+import michael from "./images/michael.jpg";
+import scotty from "./images/scotty.jpg";
+
 const data = [
   {
     id: 1,
@@ -6,8 +10,7 @@ const data = [
     city: "London",
     info:
       "Amerykański koszykarz występujący na pozycji rzucającego obrońcy, sześciokrotny mistrz NBA, dwukrotny złoty medalista olimpijski, członek Koszykarskiej Galerii Sław. Od 2006 współwłaściciel klubu Charlotte Hornets.",
-    imageURL:
-      "https://en.wikipedia.org/wiki/Michael_Jordan#/media/File:Michael_Jordan_in_2014.jpg",
+    imageURL: `${michael}`,
   },
   {
     id: 2,
@@ -15,8 +18,7 @@ const data = [
     dob: "13.05.1961",
     info:
       "Amerykański zawodowy koszykarz, grający na pozycji silnego skrzydłowego. Występował w NBA w takich zespołach jak Chicago Bulls, Detroit Pistons, San Antonio Spurs, Los Angeles Lakers oraz Dallas Mavericks[2].",
-    imageURL:
-      "https://pl.wikipedia.org/wiki/Dennis_Rodman#/media/Plik:Dennis_Rodman,_2001.jpg",
+    imageURL: `${dennis}`,
   },
   {
     id: 3,
@@ -24,8 +26,7 @@ const data = [
     dob: "25.09.1965",
     info:
       "Amerykański koszykarz, występujący na pozycji niskiego skrzydłowego, sześciokrotny mistrz National Basketball Association z drużyną Chicago Bulls. W 2010 został włączony do Koszykarskiej Galerii Sław im. Jamesa Naismitha.",
-    imageURL:
-      "https://en.wikipedia.org/wiki/Michael_Jordan#/media/File:Michael_Jordan_in_2014.jpg",
+    imageURL: `${scotty}`,
   },
 ];
 

@@ -14,7 +14,6 @@ function Employees({ data }) {
     setName(el.name);
     setDOB(el.dob);
     setPhoto(el.imageURL);
-    console.log(el);
   };
   return (
     <div className="employeesContainer">
