@@ -9,7 +9,7 @@ function Card(props) {
       </div>
       <article className="cardArticle">
         <h2 className="cardName">{name}</h2>
-        <p className="cardAge">{dob}</p>
+        <p className="cardAge">DOB: {dob}</p>
         <p className="cardBio">{info}</p>
       </article>
     </div>
