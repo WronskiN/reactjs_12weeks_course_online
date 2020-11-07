@@ -9,12 +9,11 @@ function ExtendContent({ paragraph, title }) {
   return (
     <div style={styles}>
       <h3>{title}</h3>
-      {paragraph.map((el) => (
-        <p className="paragraph">{el}</p>
+      {paragraph.map((el, index) => (
+        <p key={`text-${index}`} className="paragraph">
+          {el}
+        </p>
       ))}
-      {/* <p className="paragraph">{paragraph}</p>
-      <p className="paragraph">{paragraph}</p>
-      <p className="paragraph">{paragraph}</p> */}
     </div>
   );
 }
