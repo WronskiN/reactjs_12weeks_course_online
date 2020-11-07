@@ -20,7 +20,7 @@ function Employees({ data }) {
       <NameList>
         {data.map((el) => (
           <ListItem key={el.id} onClick={() => handleClick(el)}>
-            {el.name} {el.city}
+            {el.name}
           </ListItem>
         ))}
       </NameList>

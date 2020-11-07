@@ -7,7 +7,6 @@ const data = [
     id: 1,
     name: "Michael Jordan",
     dob: "DOB: 17.02.1968",
-    city: "London",
     info:
       "Amerykański koszykarz występujący na pozycji rzucającego obrońcy, sześciokrotny mistrz NBA, dwukrotny złoty medalista olimpijski, członek Koszykarskiej Galerii Sław. Od 2006 współwłaściciel klubu Charlotte Hornets.",
     imageURL: `${michael}`,
