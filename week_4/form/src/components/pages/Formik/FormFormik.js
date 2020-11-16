@@ -10,7 +10,7 @@ class FormFormik extends Component {
     textarea: '',
     gender: '',
     isValid: false,
-    checked: null,
+    checked: false,
   };
 
   handleChange = (values) => {
@@ -39,7 +39,7 @@ class FormFormik extends Component {
       .max(200, 'Message shoud be between 10 and 200 characters')
       .required('Message is required'),
     // gender: Yup.string().oneOf(['male', 'female'], 'Choose gender'),
-    checked: Yup.boolean().oneOf([true], 'Must accept terms'),
+    checked: Yup.bool().oneOf([true], 'Must accept terms'),
   });
 
   render() {
@@ -160,13 +160,15 @@ class FormFormik extends Component {
                 <Field
                   type="checkbox"
                   name="checkbox"
-                  values={values.checkbox}
+                  values={values.checked}
                   onBlur={handleBlur}
                   onChange={handleChange}
                 />
               </InputWrapper>
               <label htmlFor="checkbox">Accept policy</label>
-              <button type="submit">Send</button>
+              <button type="submit" onClick={handleReset}>
+                Send
+              </button>
             </Form>
           )}
         </Formik>
