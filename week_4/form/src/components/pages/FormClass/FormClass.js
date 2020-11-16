@@ -29,7 +29,10 @@ export class FormClass extends Component {
   handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    this.setState({ [name]: value, message: '' });
+    this.setState({
+      [name]: value,
+      message: '',
+    });
   };
 
   handleSubmit = (e) => {
@@ -44,7 +47,6 @@ export class FormClass extends Component {
           gender: '',
           message: 'Dziekujemy za wyslanie',
           isSubmitted: true,
-          checkbox: false,
         })
       : this.setState({
           message: 'Wypelnij puste pola',
@@ -172,7 +174,9 @@ export class FormClass extends Component {
               id="terms"
               name="terms"
               value={checkbox}
-              onChange={(e) => this.setState({ checkbox: e.target.checked })}
+              onChange={() => {
+                this.setState({ checkbox: !checkbox });
+              }}
               checked={checkbox}
             />
             <Label htmlFor="terms">Accept policy</Label>
