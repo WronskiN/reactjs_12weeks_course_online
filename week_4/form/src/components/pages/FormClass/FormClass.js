@@ -98,7 +98,7 @@ export class FormClass extends Component {
       ? this.checkboxInput.current.classList.add('errorLabel')
       : this.checkboxInput.current.classList.remove('errorLabel');
 
-    setInterval(() => {
+    setTimeout(() => {
       this.setState({ message: '' });
     }, 2000);
   };
