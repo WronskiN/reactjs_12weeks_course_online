@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Select, Input, Button, Result, FormWrapper, SelectOption } from '../';
+import { Select, Input, Button, Result, FormWrapper, SelectOption } from '..';
 import './style.css';
 
 function Form() {

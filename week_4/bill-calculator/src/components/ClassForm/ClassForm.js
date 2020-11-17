@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Select, Input, Button, Result, FormWrapper, SelectOption } from '../';
+import { Select, Input, Button, Result, FormWrapper, SelectOption } from '..';
 import './style.css';
 
 class ClassForm extends Component {
