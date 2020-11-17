@@ -1,4 +1,5 @@
 export { default as Form } from './Form/Form';
+export { default as ClassForm } from './ClassForm/ClassForm';
 export { default as FormWrapper } from './FormWrapper/FormWrapper';
 export { default as Input } from './Input/Input';
 export { default as Select } from './Select/Select';
