@@ -1,17 +1,21 @@
-import React from 'react';
-import {
-  Input,
-  RadioInput,
-  RadioGroup,
-  FieldWrapper,
-  Select,
-  Button,
-} from './';
+import React, { useState } from 'react';
+import { Input, RadioInput, RadioGroup, FieldWrapper, Select } from './';
+import { Button } from '../Button';
 import './style.css';
 
 function Form() {
+  const [catValue, setCatValue] = useState('');
+  const [inputNameValue, setInputNameValue] = useState('');
+  const [inputNumValue, setInputNumValue] = useState(0);
+  const [selectValue, setSelectValue] = useState('');
+  const [isValid, setIsValid] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('submit works');
+  };
   return (
-    <form className="form">
+    <form className="form" onSubmit={handleSubmit}>
       <FieldWrapper>
         <label htmlFor="type">Type</label>
         <RadioGroup>
@@ -28,7 +32,7 @@ function Form() {
       <FieldWrapper>
         <Select label="Category" />
       </FieldWrapper>
-      <Button value="Add" />
+      <Button className="buttonForm">Add</Button>
     </form>
   );
 }

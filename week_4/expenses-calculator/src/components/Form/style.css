@@ -5,8 +5,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #05445E;
-    color: white;
 }
 
 .inputWrapper {
@@ -44,12 +42,9 @@ input[type='number'] {
     border-radius: 2px;
 }
 
-.button {
-    width: 50%;
+.buttonDefault {
     padding: 10px;
-    margin-top: 20px;
     cursor: pointer;
-    font-size: 20px;
     letter-spacing: 1px;
     border: none;
     border-radius: 5px;
@@ -57,6 +52,13 @@ input[type='number'] {
     transition: all .3s ease;
 }
 
-.button:hover {
+.buttonForm {
+    width: 50%;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.buttonDefault:hover,
+.buttonDelete:hover {
     background-color: #D4F1F4;
 }

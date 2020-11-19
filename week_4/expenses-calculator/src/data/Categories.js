@@ -5,6 +5,7 @@ const categories = [
   'Groceries',
   'Home',
   'Holiday',
+  'Work',
 ];
 
 export default categories;

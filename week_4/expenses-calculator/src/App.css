@@ -1,9 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: bo;
+}
+
 .App {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #05445E;
+  color: #fff;
+}
+
+.budgetList {
+  width: 300px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.listItem {
+  width: 100%;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+  border-radius: 2px;
+}
+
+.listItem span {
+  padding: 5px;
+  text-align: left;
+}
+
+.listItem span:not(:last-of-type) {
+  border-right: 2px solid #fff;
+}
+
+.name {
+  width: 45%;
+}
+
+.category {
+  width: 40%;
+}
+
+.ammount {
+  width: 20%;
+}
+
+.buttonDelete {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.budget {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: red;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
