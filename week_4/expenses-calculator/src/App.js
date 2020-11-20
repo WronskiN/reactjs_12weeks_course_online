@@ -14,19 +14,16 @@ function App() {
   const [typeValue, setTypeValue] = useState('');
   const [state, setState] = useState({
     name: '',
-    ammount: '',
+    ammount: 0,
   });
   const [categoryValue, setCategoryValue] = useState('');
 
   const handleCategoryChange = (e) => {
     const value = e.target.value;
-    console.log(value);
     setCategoryValue(value);
   };
 
-  // let tempIncomeArr = [...incomeArray];
   let newObj = {
-    id: state.name,
     name: state.name,
     ammount: state.ammount,
     category: categoryValue,
@@ -42,23 +39,38 @@ function App() {
   };
 
   const handleSubmit = (e) => {
-    console.log(income, incomeArray, expenseArray, newObj);
+    console.log(incomeArray, expenseArray, newObj);
     e.preventDefault();
     if (typeValue === 'Income') {
       setIncomeArray([...incomeArray, newObj]);
-      console.log('submit works');
+      // console.log('submit works');
     } else if (typeValue === 'Expense') {
       setExpenseArray([...expenseArray, newObj]);
     } else return console.log('not working');
+
+    // handleBudgetAmmount();
   };
+
   const handleTypeChange = (e) => {
     const value = e.target.value;
-    console.log(value);
+    // console.log(value);
     setTypeValue(value);
   };
 
+  // const handleBudgetAmmount = () => {
+  //   const incArr = [...incomeArray];
+  //   const expArr = [...expenseArray];
+  //   let incSum = incArr
+  //     .map(({ ammount }) => ammount)
+  //     .reduce((a, b) => {
+  //       return a + b;
+  //     }, 0);
+  //   let expSum = expArr.map(({ ammount }) => ammount);
+  //   return console.log(incSum, expSum);
+  // };
+
   return (
-    <div className="App">
+    <div className='App'>
       <h1>expensese calculator</h1>
       <Budget budget={budget} />
       <Form

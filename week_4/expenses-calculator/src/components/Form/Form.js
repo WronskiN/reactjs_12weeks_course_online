@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Input, RadioInput, RadioGroup, FieldWrapper, Select } from './';
 import { Button } from '../Button';
-import income from '../../data/Income';
 import './style.css';
+// import income from '../../data/Income';
 
 function Form({
   handleSubmit,
@@ -15,12 +15,12 @@ function Form({
 }) {
   // const [typeValue, setTypeValue] = useState('');
   // const [categoryValue, setCategoryValue] = useState('');
-  const [isValid, setIsValid] = useState(false);
+  // const [isValid, setIsValid] = useState(false);
   // const [state, setState] = useState({
   //   name: '',
   //   ammount: '',
   // });
-  const [arr, setArr] = useState(income);
+  // const [arr, setArr] = useState(income);
   // let newArr = [
   //   {
   //     id: state.name,
@@ -60,53 +60,53 @@ function Form({
   // };
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
+    <form className='form' onSubmit={handleSubmit}>
       <FieldWrapper>
-        <label htmlFor="type">Type</label>
+        <label htmlFor='type'>Type</label>
         <RadioGroup>
           <RadioInput
-            name="type"
-            value="Expense"
-            label="Type"
+            name='type'
+            value='Expense'
+            label='Type'
             typeChange={handleTypeChange}
           />
           <RadioInput
-            name="type"
-            value="Income"
-            label="Type"
+            name='type'
+            value='Income'
+            label='Type'
             typeChange={handleTypeChange}
           />
         </RadioGroup>
       </FieldWrapper>
       <FieldWrapper>
         <Input
-          type="text"
-          name="name"
+          type='text'
+          name='name'
           value={name}
           // value={state.name}
-          label="Name"
+          label='Name'
           onChange={handleChange}
         />
       </FieldWrapper>
       <FieldWrapper>
         <Input
-          type="number"
-          name="ammount"
+          type='number'
+          name='ammount'
           value={ammount}
           // value={state.ammount}
-          label="Ammount"
+          label='Ammount'
           onChange={handleChange}
         />
       </FieldWrapper>
       <FieldWrapper>
         <Select
-          label="Category"
-          name="category"
+          label='Category'
+          name='category'
           value={categoryValue}
           categoryChange={handleCategoryChange}
         />
       </FieldWrapper>
-      <Button className="buttonForm">Add</Button>
+      <Button className='buttonForm'>Add</Button>
     </form>
   );
 }

@@ -2,10 +2,10 @@ import React from 'react';
 import ListItem from './ListItem';
 function BudgetList({ budget }) {
   return (
-    <ul className="budgetList">
-      {budget.map((el) => (
+    <ul className='budgetList'>
+      {budget.map((el, index) => (
         <ListItem
-          key={`key-${el.id}`}
+          key={`key-${index}`}
           category={el.category}
           name={el.name}
           ammount={el.ammount}
