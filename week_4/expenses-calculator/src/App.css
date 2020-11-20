@@ -6,7 +6,7 @@
 
 .App {
   width: 100%;
-  min-height: 100vh;
+  min-height: 200vh;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
 }
 
 .budgetList {
-  width: 300px;
+  width: 350px;
   list-style: none;
   display: flex;
   flex-direction: column;
