@@ -1,10 +1,11 @@
 import React from 'react';
 
-function Input({ name, label, type }) {
+function Input(props) {
+  const { name, label, type, value, onChange } = props;
   return (
     <label className="inputInnerContainer">
       {label && label}
-      <input name={name} type={type} />
+      <input name={name} type={type} value={value} onChange={onChange} />
     </label>
   );
 }
