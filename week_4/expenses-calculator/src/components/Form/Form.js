@@ -2,7 +2,6 @@ import React from 'react';
 import { Input, RadioInput, RadioGroup, FieldWrapper, Select } from './';
 import { Button } from '../Button';
 import './style.css';
-// import income from '../../data/Income';
 
 function Form({
   handleSubmit,
@@ -13,52 +12,6 @@ function Form({
   ammount,
   categoryValue,
 }) {
-  // const [typeValue, setTypeValue] = useState('');
-  // const [categoryValue, setCategoryValue] = useState('');
-  // const [isValid, setIsValid] = useState(false);
-  // const [state, setState] = useState({
-  //   name: '',
-  //   ammount: '',
-  // });
-  // const [arr, setArr] = useState(income);
-  // let newArr = [
-  //   {
-  //     id: state.name,
-  //     name: state.name,
-  //     ammount: state.ammount,
-  //     category: categoryValue,
-  //   },
-  // ];
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   if (typeValue === 'Income') {
-  //     setArr([...arr, newArr]);
-  //     console.log('submit works');
-  //   } else console.log('not working');
-  // };
-
-  // const handleTypeChange = (e) => {
-  //   const value = e.target.value;
-  //   console.log(value);
-  //   setTypeValue(value);
-  // };
-
-  // const handleChange = (e) => {
-  //   const value = e.target.value;
-  //   console.log(value);
-  //   setState({
-  //     ...state,
-  //     [e.target.name]: value,
-  //   });
-  // };
-
-  // const handleCategoryChange = (e) => {
-  //   const value = e.target.value;
-  //   console.log(value);
-  //   setCategoryValue(value);
-  // };
-
   return (
     <form className='form' onSubmit={handleSubmit}>
       <FieldWrapper>
