@@ -18,9 +18,31 @@ function App() {
   });
   const [categoryValue, setCategoryValue] = useState('');
 
+  const incArr = [...incomeArray];
+  const expArr = [...expenseArray];
+  let incSum = incArr
+    .map(({ ammount }) => ammount)
+    .reduce((a, b) => {
+      return a + b;
+    }, 0);
+  let expSum = expArr
+    .map(({ ammount }) => ammount)
+    .reduce((a, b) => {
+      return a + b;
+    }, 0);
+
+  const handleBudget = (a, b) => {
+    return a - b;
+  };
+
   const handleCategoryChange = (e) => {
     const value = e.target.value;
     setCategoryValue(value);
+  };
+
+  const handleTypeChange = (e) => {
+    const value = e.target.value;
+    setTypeValue(value);
   };
 
   let newObj = {
@@ -39,44 +61,21 @@ function App() {
   };
 
   const handleSubmit = (e) => {
-    console.log(incomeArray, expenseArray, newObj);
     e.preventDefault();
+    setBudget(incSum - expSum);
     if (typeValue === 'Income') {
       setIncomeArray([...incomeArray, newObj]);
-      // console.log('submit works');
+      setBudget((prevState) => prevState + newObj.ammount);
     } else if (typeValue === 'Expense') {
       setExpenseArray([...expenseArray, newObj]);
+      setBudget((prevState) => prevState - newObj.ammount);
     } else return console.log('not working');
-
-    handleBudgetAmmount();
-  };
-
-  const handleTypeChange = (e) => {
-    const value = e.target.value;
-    // console.log(value);
-    setTypeValue(value);
-  };
-
-  const handleBudgetAmmount = () => {
-    const incArr = [...incomeArray];
-    const expArr = [...expenseArray];
-    let incSum = incArr
-      .map(({ ammount }) => ammount)
-      .reduce((a, b) => {
-        return a + b;
-      }, 0);
-    let expSum = expArr
-      .map(({ ammount }) => ammount)
-      .reduce((a, b) => {
-        return a + b;
-      }, 0);
-    return console.log(incSum, expSum);
   };
 
   return (
     <div className='App'>
       <h1>expensese calculator</h1>
-      <Budget budget={budget} />
+      <Budget budget={handleBudget(incSum, expSum)} />
       <Form
         incomeArray={setIncomeArray}
         handleSubmit={handleSubmit}
