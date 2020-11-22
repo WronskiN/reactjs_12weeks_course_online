@@ -1,4 +1,5 @@
 const categories = [
+  '',
   'Bills',
   'Clothes',
   'Education',
