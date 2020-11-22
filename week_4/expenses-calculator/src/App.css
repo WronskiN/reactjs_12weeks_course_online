@@ -73,8 +73,15 @@
   margin-top: 50px;
   border: none;
   border-radius: 50%;
-  background-color: red;
   font-size: 25px;
   font-weight: 700;
   letter-spacing: 2px;
+}
+
+.budget--positive {
+  background-color: green;
+}
+
+.budget--negative {
+  background-color: red;
 }
