@@ -4,13 +4,14 @@ import { Form } from './components/Form';
 import { BudgetListWrapper } from './components/BudgetList';
 import { Budget } from './components/Budget';
 import { BudgetList } from './components/BudgetList';
+import { useLocalStorage } from './utilities/useLocalStorage';
 import income from './data/Income';
 import expenses from './data/Expenses';
 
 function App() {
   const [budget, setBudget] = useState(0);
-  const [incomeArray, setIncomeArray] = useState(income);
-  const [expenseArray, setExpenseArray] = useState(expenses);
+  const [incomeArray, setIncomeArray] = useLocalStorage(income, income);
+  const [expenseArray, setExpenseArray] = useLocalStorage(expenses, expenses);
   const [typeValue, setTypeValue] = useState('');
   const [state, setState] = useState({
     name: '',
@@ -86,8 +87,6 @@ function App() {
 
   return (
     <div className='App'>
-      {console.log(incomeArray)}
-      {console.log(expenseArray)}
       <h1>expensese calculator</h1>
       <Budget budget={handleBudget(incSum, expSum)} />
       <Form
