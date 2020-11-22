@@ -46,6 +46,7 @@ function App() {
   };
 
   let newObj = {
+    id: 0,
     name: state.name,
     ammount: Number(state.ammount),
     category: categoryValue,
@@ -64,9 +65,13 @@ function App() {
     e.preventDefault();
     setBudget(incSum - expSum);
     if (typeValue === 'Income') {
+      let actualId = incomeArray.length;
+      newObj.id = actualId;
       setIncomeArray([...incomeArray, newObj]);
       setBudget((prevState) => prevState + newObj.ammount);
     } else if (typeValue === 'Expense') {
+      let actualId = expenseArray.length;
+      newObj.id = actualId;
       setExpenseArray([...expenseArray, newObj]);
       setBudget((prevState) => prevState - newObj.ammount);
     } else return console.log('not working');
@@ -74,6 +79,8 @@ function App() {
 
   return (
     <div className='App'>
+      {console.log(incomeArray)}
+      {console.log(expenseArray)}
       <h1>expensese calculator</h1>
       <Budget budget={handleBudget(incSum, expSum)} />
       <Form
