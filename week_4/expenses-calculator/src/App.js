@@ -77,6 +77,13 @@ function App() {
     } else return console.log('not working');
   };
 
+  const handleIncomeElement = (id) => {
+    return setIncomeArray(incomeArray.filter((item) => item.id !== id));
+  };
+  const handleExpenseElement = (id) => {
+    return setExpenseArray(expenseArray.filter((item) => item.id !== id));
+  };
+
   return (
     <div className='App'>
       {console.log(incomeArray)}
@@ -96,13 +103,13 @@ function App() {
       {incomeArray.length > 0 ? (
         <BudgetListWrapper>
           <h2>Income</h2>
-          <BudgetList budget={incomeArray} />
+          <BudgetList array={incomeArray} handleClick={handleIncomeElement} />
         </BudgetListWrapper>
       ) : null}
       {expenseArray.length > 0 ? (
         <BudgetListWrapper>
           <h2>Expenses</h2>
-          <BudgetList budget={expenseArray} />
+          <BudgetList array={expenseArray} handleClick={handleExpenseElement} />
         </BudgetListWrapper>
       ) : null}
     </div>

@@ -5,13 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 function ListItem(props) {
-  const { name, ammount, category } = props;
+  const { name, ammount, category, handleClick, id } = props;
   return (
-    <li className="listItem">
-      <span className="name">{name}</span>
-      <span className="ammount">{`${ammount} zl`}</span>
-      <span className="category">{`Cat: ${category}`}</span>
-      <Button className="buttonDelete">
+    <li className='listItem'>
+      <span className='name'>{name}</span>
+      <span className='ammount'>{`${ammount} zl`}</span>
+      <span className='category'>{`Cat: ${category}`}</span>
+      <Button className='buttonDelete' onClick={() => handleClick(id)}>
         <FontAwesomeIcon icon={faTrash} />
       </Button>
     </li>

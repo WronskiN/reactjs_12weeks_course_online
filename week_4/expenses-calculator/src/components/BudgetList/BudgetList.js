@@ -1,14 +1,17 @@
 import React from 'react';
 import ListItem from './ListItem';
-function BudgetList({ budget }) {
+function BudgetList({ array, handleClick }) {
   return (
     <ul className='budgetList'>
-      {budget.map((el, index) => (
+      {array.map((el, index) => (
         <ListItem
           key={`key-${index}`}
           category={el.category}
           name={el.name}
           ammount={el.ammount}
+          array={array}
+          id={el.id}
+          handleClick={handleClick}
         />
       ))}
     </ul>
