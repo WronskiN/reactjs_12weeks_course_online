@@ -25,7 +25,7 @@ function App() {
 
   let newObj = {
     name: state.name,
-    ammount: state.ammount,
+    ammount: Number(state.ammount),
     category: categoryValue,
   };
 
@@ -48,7 +48,7 @@ function App() {
       setExpenseArray([...expenseArray, newObj]);
     } else return console.log('not working');
 
-    // handleBudgetAmmount();
+    handleBudgetAmmount();
   };
 
   const handleTypeChange = (e) => {
@@ -57,17 +57,21 @@ function App() {
     setTypeValue(value);
   };
 
-  // const handleBudgetAmmount = () => {
-  //   const incArr = [...incomeArray];
-  //   const expArr = [...expenseArray];
-  //   let incSum = incArr
-  //     .map(({ ammount }) => ammount)
-  //     .reduce((a, b) => {
-  //       return a + b;
-  //     }, 0);
-  //   let expSum = expArr.map(({ ammount }) => ammount);
-  //   return console.log(incSum, expSum);
-  // };
+  const handleBudgetAmmount = () => {
+    const incArr = [...incomeArray];
+    const expArr = [...expenseArray];
+    let incSum = incArr
+      .map(({ ammount }) => ammount)
+      .reduce((a, b) => {
+        return a + b;
+      }, 0);
+    let expSum = expArr
+      .map(({ ammount }) => ammount)
+      .reduce((a, b) => {
+        return a + b;
+      }, 0);
+    return console.log(incSum, expSum);
+  };
 
   return (
     <div className='App'>
