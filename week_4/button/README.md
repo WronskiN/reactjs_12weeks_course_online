@@ -1,4 +1,18 @@
-# Getting Started with Create React App
+# About Project
+
+Task - 1:
+First button:
+Create a new application that will have the main App component. Write a Button component that will contain the HTML button element. By default, the background will be blue. After loading the application, let the button turn red and the text color turn white. Program it in the Button component with refs.
+
+Task - 2:
+Second Button:
+Change the way the color changes. Let the color not change after loading the application, but after hovering the mouse over.
+
+Task - 3:
+Third Button:
+Transfer the logic responsible for the color change to the parent component or App. Tips: use forwardRef
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
