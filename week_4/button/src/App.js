@@ -6,7 +6,7 @@ function App() {
   return (
     <div className='App'>
       <h1>Button project</h1>
-      <Button />
+      <Button primaryClass='button--primary' />
     </div>
   );
 }

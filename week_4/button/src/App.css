@@ -1,3 +1,15 @@
 .App {
   text-align: center;
 }
+
+
+button {
+  padding: 10px;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+}
+
+.button--primary {
+  background-color: blue;
+}
