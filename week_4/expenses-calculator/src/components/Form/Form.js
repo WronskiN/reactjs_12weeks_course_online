@@ -3,15 +3,16 @@ import { Input, RadioInput, RadioGroup, FieldWrapper, Select } from './';
 import { Button } from '../Button';
 import './style.css';
 
-function Form({
-  handleSubmit,
-  handleTypeChange,
-  handleChange,
-  handleCategoryChange,
-  name,
-  ammount,
-  categoryValue,
-}) {
+function Form(props) {
+  const {
+    handleSubmit,
+    handleTypeChange,
+    handleChange,
+    handleCategoryChange,
+    name,
+    ammount,
+    categoryValue,
+  } = props;
   return (
     <form className='form' onSubmit={handleSubmit}>
       <FieldWrapper>
@@ -36,7 +37,6 @@ function Form({
           type='text'
           name='name'
           value={name}
-          // value={state.name}
           label='Name'
           onChange={handleChange}
         />
@@ -46,7 +46,6 @@ function Form({
           type='number'
           name='ammount'
           value={ammount}
-          // value={state.ammount}
           label='Ammount'
           onChange={handleChange}
         />
