@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import ErrorMessage from '../../ErrorMessage/ErrorMessage';
 import './form.css';
 
 function useInput(initialValue = '') {
@@ -19,6 +20,7 @@ function Form() {
   const [message, setMessage] = useState('');
   const [checkbox, setCheckbox] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [activeErrorMessage, setActiveErrorMessage] = useState(null);
 
   const nameInput = useRef();
   const surnameInput = useRef();
@@ -56,17 +58,20 @@ function Form() {
 
     if (name && surname && textarea && gender && checkbox) {
       setIsSubmitting(!isSubmitting);
+      setActiveErrorMessage(false);
       setTimeout(() => {
         setMessage(<p>Dziekuje za wiadomosc</p>);
         clearField();
       }, 500);
     } else {
       setIsSubmitting(false);
+      setActiveErrorMessage(true);
       setTimeout(() => {
         setMessage(
-          <p className="errorLabel">Prosze wypelnic wszystkie pola</p>
+          <p className='errorLabel'>Prosze wypelnic wszystkie pola</p>
         );
-      }, 500);
+        setActiveErrorMessage(false);
+      }, 1000);
     }
 
     validation();
@@ -78,67 +83,70 @@ function Form() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="form">
-        <div className="inputWrapper">
+      <form onSubmit={handleSubmit} className='form'>
+        <div className='inputWrapper'>
           <input
-            className="input"
-            type="text"
-            placeholder="Name"
-            name="name"
+            className='input'
+            type='text'
+            placeholder='Name'
+            name='name'
             onChange={handleNameChange}
             ref={nameInput}
           />
+          {activeErrorMessage ? <ErrorMessage /> : null}
         </div>
-        <div className="inputWrapper">
+        <div className='inputWrapper'>
           <input
-            className="input"
-            type="text"
-            placeholder="Surname"
-            name="surname"
+            className='input'
+            type='text'
+            placeholder='Surname'
+            name='surname'
             onChange={handleSurnameChange}
             ref={surnameInput}
           />
+          {activeErrorMessage ? <ErrorMessage /> : null}
         </div>
         <div>
           <textarea
-            type="text"
-            placeholder="Bio"
-            name="textarea"
+            type='text'
+            placeholder='Bio'
+            name='textarea'
             onChange={handleTextareaChange}
             ref={textareaInput}
           />
+          {activeErrorMessage ? <ErrorMessage /> : null}
         </div>
         <div ref={genderInput}>
           <input
-            type="radio"
-            name="gender"
-            value="male"
-            id="male"
+            type='radio'
+            name='gender'
+            value='male'
+            id='male'
             onChange={handleGenderChange}
           />
-          <label htmlFor="male">Male</label>
+          <label htmlFor='male'>Male</label>
           <input
-            type="radio"
-            name="gender"
-            value="female"
-            id="female"
+            type='radio'
+            name='gender'
+            value='female'
+            id='female'
             onChange={handleGenderChange}
           />
-          <label htmlFor="female">Female</label>
+          <label htmlFor='female'>Female</label>
         </div>
         <div>
           <input
-            type="checkbox"
-            name="policy"
-            id="policy"
+            type='checkbox'
+            name='policy'
+            id='policy'
             onChange={handleCheckbox}
             checked={checkbox ? true : false}
           />
-          <label htmlFor="policy" ref={checkboxInput}>
+          <label htmlFor='policy' ref={checkboxInput}>
             Accept policy
           </label>
         </div>
-        <button type="submit" className="btn">
+        <button type='submit' className='btn'>
           Send
         </button>
         {message}
