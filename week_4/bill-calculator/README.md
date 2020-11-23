@@ -1,4 +1,26 @@
-# Getting Started with Create React App
+# Form validation
+
+Task - 1:
+Prepare the contact form in which the user will enter their data:
+
+<ul>
+<li>name (input element)</li>
+<li>email (input element)</li>
+<li>short bio (textarea element)</li>
+<li>gender selection - (radio element)</li>
+<li>acceptance of the regulations (does not have to exist;) here we will use the checkbox element)</li>
+</ul>
+
+At the end of the form there should be a button for sending it. All fields are required, which means that the form cannot be sent until the user enters all the data and accepts the regulations.
+
+If any field has not been filled in, the application will set a red border on this field and the message: "Required field" will appear below the field.
+
+If all information has been entered, then all fields will be cleared (there will be no data in them), and the message "Thank you for sending" will appear on the screen
+
+Task -2:
+Complete this task 2 using the Formik or React Hook Form library
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
