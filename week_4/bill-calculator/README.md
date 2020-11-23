@@ -1,24 +1,20 @@
-# Form validation
+# Bill calculations
 
 Task - 1:
-Prepare the contact form in which the user will enter their data:
+Write a form that will consist of fields:
 
 <ul>
-<li>name (input element)</li>
-<li>email (input element)</li>
-<li>short bio (textarea element)</li>
-<li>gender selection - (radio element)</li>
-<li>acceptance of the regulations (does not have to exist;) here we will use the checkbox element)</li>
+<li>input field of the number type, where we will provide the net amount to be paid</li>
+<li>select field, where we will enter the tip amount, e.g. 5, 10, 15, 20%</li>
+<li>button "Recalculate"</li>
 </ul>
 
-At the end of the form there should be a button for sending it. All fields are required, which means that the form cannot be sent until the user enters all the data and accepts the regulations.
+After clicking on "Convert", the application will calculate the gross price, where the VAT will be set at 5, 8 or 25% (your choice;).
 
-If any field has not been filled in, the application will set a red border on this field and the message: "Required field" will appear below the field.
-
-If all information has been entered, then all fields will be cleared (there will be no data in them), and the message "Thank you for sending" will appear on the screen
+After sending, let the result be displayed instead of the form.
 
 Task -2:
-Complete this task 2 using the Formik or React Hook Form library
+Complete this task with both a class component and a function component
 
 ## Getting Started with Create React App
 
