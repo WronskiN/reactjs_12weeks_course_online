@@ -88,7 +88,9 @@ function App() {
   return (
     <div className='App'>
       <h1>expensese calculator</h1>
-      <Budget budget={handleBudget(incSum, expSum)} />
+      <BudgetListWrapper>
+        <Budget budget={handleBudget(incSum, expSum)} />
+      </BudgetListWrapper>
       <Form
         incomeArray={setIncomeArray}
         handleSubmit={handleSubmit}
@@ -99,24 +101,26 @@ function App() {
         ammount={state.ammount}
         categoryValue={categoryValue}
       />
-      {incomeArray.length > 0 ? (
-        <BudgetListWrapper>
-          <h2>Income</h2>
-          <BudgetList
-            array={incomeArray}
-            handleClick={handleDeleteIncomeElement}
-          />
-        </BudgetListWrapper>
-      ) : null}
-      {expenseArray.length > 0 ? (
-        <BudgetListWrapper>
-          <h2>Expenses</h2>
-          <BudgetList
-            array={expenseArray}
-            handleClick={handleDeleteExpenseElement}
-          />
-        </BudgetListWrapper>
-      ) : null}
+      <div className='container'>
+        {incomeArray.length > 0 ? (
+          <BudgetListWrapper>
+            <h2>Income</h2>
+            <BudgetList
+              array={incomeArray}
+              handleClick={handleDeleteIncomeElement}
+            />
+          </BudgetListWrapper>
+        ) : null}
+        {expenseArray.length > 0 ? (
+          <BudgetListWrapper>
+            <h2>Expenses</h2>
+            <BudgetList
+              array={expenseArray}
+              handleClick={handleDeleteExpenseElement}
+            />
+          </BudgetListWrapper>
+        ) : null}
+      </div>
     </div>
   );
 }
