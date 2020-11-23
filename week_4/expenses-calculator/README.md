@@ -1,4 +1,29 @@
-# Getting Started with Create React App
+# Expensese calculator project
+
+Task:
+Write an expense calculator. Divide the application into two lists:
+
+1. The first list shows your expenses (name, amount, category)
+2. The second list is revenue (name, amount, category)
+
+Make an add form that has:
+
+&bullet; radio field indicating whether it is an expense or a revenue
+&bullet; input field of type text with name
+&bullet; input field of type number with amount
+&bullet; select field with category
+&bullet; add button
+You can store categories in an array and pass to select. We should be able to delete each item (both income and expense)
+
+In a visible place, the application should show your budget, i.e. PLN 1500 or PLN 200 and color it green or red depending on whether it is above zero.
+
+Modification 1
+Define two lists in advance in the tables - for expenses and income. These two lists will show up immediately after loading the application. The form will add a new item to the existing ones.
+
+Modification 2
+You can modify your application in such a way that the added data is stored in localStorage - i.e. each time you load the application, the data will not disappear and will be loaded from localStorage.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
