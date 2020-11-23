@@ -8,8 +8,6 @@ button {
   letter-spacing: 1px;
   border: none;
   cursor: pointer;
-}
-
-.button--primary {
   background-color: blue;
+  margin: 0 10px;
 }
