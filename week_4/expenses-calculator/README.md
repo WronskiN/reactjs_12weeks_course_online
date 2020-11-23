@@ -8,11 +8,14 @@ Write an expense calculator. Divide the application into two lists:
 
 Make an add form that has:
 
-&bullet; radio field indicating whether it is an expense or a revenue
-&bullet; input field of type text with name
-&bullet; input field of type number with amount
-&bullet; select field with category
-&bullet; add button
+<ul>
+<li>radio field indicating whether it is an expense or a revenue</li>
+<li>input field of type text with name</li>
+<li>input field of type number with amount</li>
+<li>select field with category</li>
+<li>add button</li>
+</ul>
+
 You can store categories in an array and pass to select. We should be able to delete each item (both income and expense)
 
 In a visible place, the application should show your budget, i.e. PLN 1500 or PLN 200 and color it green or red depending on whether it is above zero.
