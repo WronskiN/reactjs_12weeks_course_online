@@ -11,7 +11,7 @@ export class FormClass extends Component {
     textarea: '',
     textareaErr: false,
     gender: '',
-    fieldMessage: 'Wypelnij pole',
+    fieldMessage: 'Please complete field',
     message: '',
     checkbox: false,
     isSubmitted: null,
@@ -45,13 +45,13 @@ export class FormClass extends Component {
           surname: '',
           textarea: '',
           gender: '',
-          message: 'Dziekujemy za wyslanie',
+          message: 'Thank you for sending message',
           isSubmitted: true,
         })
       : this.setState({
-          message: 'Wypelnij puste pola',
+          message: 'Please complete fields',
           isSubmitted: false,
-          fieldMessage: 'pole wymagane',
+          fieldMessage: 'Please complete field',
         });
 
     if (name.length > 0) {
@@ -118,70 +118,70 @@ export class FormClass extends Component {
     } = this.state;
     return (
       <div>
-        <form onSubmit={this.handleSubmit} className="form">
+        <form onSubmit={this.handleSubmit} className='form'>
           <InputWrapper ref={this.nameInput}>
             <Input
-              type="text"
-              placeholder="Name"
-              name="name"
+              type='text'
+              placeholder='Name'
+              name='name'
               value={name}
               onChange={this.handleChange}
             />
           </InputWrapper>
-          {nameErr && <Label htmlFor="name">{fieldMessage}</Label>}
+          {nameErr && <Label htmlFor='name'>{fieldMessage}</Label>}
           <InputWrapper ref={this.surnameInput}>
             <Input
-              type="text"
-              placeholder="Surname"
-              name="surname"
+              type='text'
+              placeholder='Surname'
+              name='surname'
               value={surname}
               onChange={this.handleChange}
             />
           </InputWrapper>
-          {surnameErr && <Label htmlFor="name">{fieldMessage}</Label>}
+          {surnameErr && <Label htmlFor='name'>{fieldMessage}</Label>}
           <InputWrapper ref={this.textareaInput}>
             <textarea
-              type="text"
-              placeholder="Bio"
-              name="textarea"
+              type='text'
+              placeholder='Bio'
+              name='textarea'
               value={this.state.textarea}
               onChange={this.handleChange}
               ref={this.textareaInput}
             />
           </InputWrapper>
-          {textareaErr && <Label htmlFor="name">{fieldMessage}</Label>}
+          {textareaErr && <Label htmlFor='name'>{fieldMessage}</Label>}
           <InputWrapper ref={this.genderInput}>
             <InputRadio
-              type="radio"
-              name="gender"
-              value="male"
-              id="male"
+              type='radio'
+              name='gender'
+              value='male'
+              id='male'
               onChange={this.handleChange}
             />
-            <Label htmlFor="male">Male</Label>
+            <Label htmlFor='male'>Male</Label>
             <InputRadio
-              type="radio"
-              name="gender"
-              value="female"
-              id="female"
+              type='radio'
+              name='gender'
+              value='female'
+              id='female'
               onChange={this.handleChange}
             />
-            <Label htmlFor="female">Female</Label>
+            <Label htmlFor='female'>Female</Label>
           </InputWrapper>
           <InputWrapper ref={this.checkboxInput}>
             <Input
-              type="checkbox"
-              id="terms"
-              name="terms"
+              type='checkbox'
+              id='terms'
+              name='terms'
               value={checkbox}
               onChange={() => {
                 this.setState({ checkbox: !checkbox });
               }}
               checked={checkbox}
             />
-            <Label htmlFor="terms">Accept policy</Label>
+            <Label htmlFor='terms'>Accept policy</Label>
           </InputWrapper>
-          <button type="submit" className="btn">
+          <button type='submit' className='btn'>
             Send
           </button>
           <p>{message}</p>
