@@ -1,8 +1,12 @@
 import React from 'react';
 import './style.css';
 
-function Button() {
-  return <button>Open Dialog</button>;
+function Button({ text, btnClass, handleClick }) {
+  return (
+    <button className={btnClass} onClick={handleClick}>
+      {text}
+    </button>
+  );
 }
 
 export default Button;
