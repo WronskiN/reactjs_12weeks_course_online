@@ -10,3 +10,11 @@ button:hover {
     cursor: pointer;
     background-color: #808080;
 }
+
+.button__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: ;
+}

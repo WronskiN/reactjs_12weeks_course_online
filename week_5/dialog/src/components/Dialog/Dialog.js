@@ -1,6 +1,6 @@
 import React from 'react';
 import { Article } from './';
-import Button from '../Button';
+import Button, { ButtonWrapper } from '../Button';
 import './style.css';
 
 const articleText =
@@ -11,6 +11,10 @@ function Dialog({ handleClick }) {
     <div className='dialog__container'>
       <Button text='x' btnClass='dialog__button' handleClick={handleClick} />
       <Article text={articleText} />
+      <ButtonWrapper>
+        <Button text='Confirm' />
+        <Button text='Abort' />
+      </ButtonWrapper>
     </div>
   );
 }
