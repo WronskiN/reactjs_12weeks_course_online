@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import ErrorText from '../../ErrorText/ErrorText.js';
 import * as Yup from 'yup';
 import { InputWrapper } from '../../../components/Input';
 
@@ -38,7 +39,7 @@ class FormFormik extends Component {
       .min(10, 'Message shoud be between 10 and 200 characters')
       .max(200, 'Message shoud be between 10 and 200 characters')
       .required('Message is required'),
-    // gender: Yup.string().oneOf(['male', 'female'], 'Choose gender'),
+    gender: Yup.string().oneOf(['male', 'female'], 'Choose gender'),
     checked: Yup.bool().oneOf([true], 'Must accept terms'),
   });
 
@@ -52,123 +53,99 @@ class FormFormik extends Component {
             surname: '',
             textarea: '',
             gender: '',
+            isValid: false,
             checked: false,
             isSubmiting: true,
           }}
           validationSchema={this.validationSchema}
-          onSubmit={(values) => {
+          onSubmit={(values, { setSubmitting }) => {
             console.log(values);
+            setSubmitting(true);
+
+            setSubmitting(false);
           }}
         >
           {({
             values,
-            handleChange,
+            handleReset,
             errors,
             touched,
             isSubmitting,
-            handleBlur,
-            handleReset,
-            handleSubmit,
+            isValid,
           }) => (
-            <Form className="form" onSubmit={handleSubmit} noValidate>
+            <Form className='form'>
               <InputWrapper>
                 <Field
-                  className="input"
-                  id="name"
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  values={values.name}
-                  onBlur={handleBlur}
-                  onChange={handleChange}
+                  className='input'
+                  id='name'
+                  type='text'
+                  name='name'
+                  placeholder='Name'
                 />
               </InputWrapper>
               {errors.name && touched.name ? (
                 <ErrorMessage
-                  name="name"
-                  component="div"
-                  className="errorLabel"
+                  name='name'
+                  component='div'
+                  className='errorLabel error'
                 />
               ) : null}
 
               <InputWrapper>
                 <Field
-                  className="input"
-                  type="text"
-                  name="surname"
-                  placeholder="Surname"
-                  values={values.surname}
-                  onBlur={handleBlur}
-                  onChange={handleChange}
+                  className='input'
+                  type='text'
+                  name='surname'
+                  placeholder='Surname'
                 />
               </InputWrapper>
               {errors.surname && touched.surname ? (
                 <ErrorMessage
-                  name="surname"
-                  component="div"
-                  className="errorLabel"
+                  name='surname'
+                  component='div'
+                  className='errorLabel'
                 />
               ) : null}
 
               <InputWrapper>
                 <Field
-                  className="textarea"
-                  type="textarea"
-                  name="textarea"
-                  placeholder="Message field"
-                  values={values.textarea}
-                  onBlur={handleBlur}
-                  onChange={handleChange}
+                  className='textarea'
+                  type='textarea'
+                  name='textarea'
+                  placeholder='Message field'
                 />
               </InputWrapper>
               {errors.textarea && touched.textarea ? (
                 <ErrorMessage
-                  name="textarea"
-                  component="div"
-                  className="errorLabel"
+                  name='textarea'
+                  component='div'
+                  className='errorLabel'
                 />
               ) : null}
 
-              <InputWrapper role="group">
-                <Field
-                  type="radio"
-                  name="gender"
-                  id="male"
-                  value="male"
-                  values={values.gender}
-                  onBlur={handleBlur}
-                  onChange={handleChange}
-                />
-                <label htmlFor="male">Male</label>
-                <Field
-                  type="radio"
-                  name="gender"
-                  id="female"
-                  value="female"
-                  values={values.gender}
-                  onBlur={handleBlur}
-                  onChange={handleChange}
-                />
-                <label htmlFor="female">Female</label>
+              <InputWrapper role='group'>
+                <Field type='radio' name='gender' value='male' />
+                <label htmlFor='male'>Male</label>
+                <Field type='radio' name='gender' value='female' />
+                <label htmlFor='female'>Female</label>
               </InputWrapper>
               <ErrorMessage
-                name="gender"
-                component="div"
-                className="errorLabel"
+                name='gender'
+                component='div'
+                className='errorLabel'
               />
               <InputWrapper>
                 <Field
-                  type="checkbox"
-                  name="checkbox"
-                  values={values.checked}
-                  onBlur={handleBlur}
-                  onChange={handleChange}
+                  type='checkbox'
+                  name='checked'
+                  checked={values.checked}
                 />
               </InputWrapper>
-              <label htmlFor="checkbox">Accept policy</label>
-              <button type="submit" onClick={handleReset}>
+              <label htmlFor='checkbox'>Accept policy</label>
+              <button type='submit' onClick={handleReset}>
                 Send
               </button>
+              {!isValid ? <ErrorText /> : null}
             </Form>
           )}
         </Formik>

@@ -6,8 +6,8 @@ const styles = {
   padding: 0,
 };
 
-function ErrorMessage() {
+function ErrorText() {
   return <p style={styles}>Please complete field</p>;
 }
 
-export default ErrorMessage;
+export default ErrorText;

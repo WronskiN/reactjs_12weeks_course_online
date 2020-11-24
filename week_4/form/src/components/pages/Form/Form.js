@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import ErrorMessage from '../../ErrorMessage/ErrorMessage';
+import ErrorText from '../../ErrorText/ErrorText';
 import './form.css';
 
 function useInput(initialValue = '') {
@@ -93,7 +93,7 @@ function Form() {
             onChange={handleNameChange}
             ref={nameInput}
           />
-          {activeErrorMessage ? <ErrorMessage /> : null}
+          {activeErrorMessage ? <ErrorText /> : null}
         </div>
         <div className='inputWrapper'>
           <input
@@ -104,7 +104,7 @@ function Form() {
             onChange={handleSurnameChange}
             ref={surnameInput}
           />
-          {activeErrorMessage ? <ErrorMessage /> : null}
+          {activeErrorMessage ? <ErrorText /> : null}
         </div>
         <div>
           <textarea
@@ -114,7 +114,7 @@ function Form() {
             onChange={handleTextareaChange}
             ref={textareaInput}
           />
-          {activeErrorMessage ? <ErrorMessage /> : null}
+          {activeErrorMessage ? <ErrorText /> : null}
         </div>
         <div ref={genderInput}>
           <input
