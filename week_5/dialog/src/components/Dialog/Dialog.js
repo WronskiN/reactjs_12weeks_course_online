@@ -1,6 +1,7 @@
 import React from 'react';
 import { Article } from './';
 import Button, { ButtonWrapper } from '../Button';
+import { confirmFunction, abortFunction } from '../../functions';
 import './style.css';
 
 const articleText =
@@ -12,8 +13,8 @@ function Dialog({ handleClick }) {
       <Button text='x' btnClass='dialog__button' handleClick={handleClick} />
       <Article text={articleText} />
       <ButtonWrapper>
-        <Button text='Confirm' />
-        <Button text='Abort' />
+        <Button text='Confirm' handleClick={confirmFunction} />
+        <Button text='Abort' handleClick={abortFunction} />
       </ButtonWrapper>
     </div>
   );
