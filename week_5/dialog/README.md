@@ -5,6 +5,10 @@ Prepare a dialog component (Dialog) that will be displayed,
 for example, after clicking on a button (Button component. The window should be able to set its title and content.
 It should also contain a button that allows you to close it (eg black X or OK button).
 
+Modification:
+Add two windows in the window: Confirm and Abort.
+After clicking on each of them, an early company (handler) passed from the outside to this program. For now, it might be just console.log.
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
