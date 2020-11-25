@@ -28,6 +28,9 @@ function NavMenu({ handleClick, toggleStatus }) {
           <NavLink to='about' className='link'>
             About
           </NavLink>
+          <NavLink to='users' className='link'>
+            Users
+          </NavLink>
           <NavLink to='contact' className='link'>
             Contact
           </NavLink>
