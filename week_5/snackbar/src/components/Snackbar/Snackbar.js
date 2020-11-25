@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import './style.css';
 
 import Button from '../Button';
@@ -41,5 +42,14 @@ function Snackbar(props) {
     </>
   );
 }
+
+Snackbar.propTypes = {
+  content: PropTypes.string.isRequired,
+  duration: PropTypes.number.isRequired,
+  snackbarStatus: PropTypes.bool.isRequired,
+  handleClose: PropTypes.func.isRequired,
+  handleClick: PropTypes.func.isRequired,
+  position: PropTypes.string.isRequired,
+};
 
 export default Snackbar;
