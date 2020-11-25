@@ -12,6 +12,7 @@ function Snackbar(props) {
     handleClose,
     handleClick,
     position,
+    type,
   } = props;
   const [snakbarState, setSnackbarState] = useState();
 
@@ -28,7 +29,7 @@ function Snackbar(props) {
   return (
     <>
       {snakbarState ? (
-        <div className={`snackbar--success snackbar--${position}`}>
+        <div className={`snackbar ${type} ${position}`}>
           <h2>{content}</h2>
           <Button
             buttonContent='x'

@@ -10,12 +10,12 @@ function App() {
   const handleDisplaySnackbar = () => setDisplaySnackbar(!dispaySnackbar);
   const handleCloseBtn = () => setDisplaySnackbar(false);
 
-  // const center = 'center';
-  // const topRight = 'topRight';
-  // const topLeft = 'topLeft';
-  // const bottomLeft = 'bottomLeft';
-  // const bottomRight = 'bottomRight';
-  const centerBottom = 'centerBottom';
+  // const center = 'snackbar--center';
+  // const topRight = 'snackbar--topRight';
+  // const topLeft = 'snackbar--topLeft';
+  // const bottomLeft = 'snackbar--bottomLeft';
+  // const bottomRight = 'snackbar--bottomRight';
+  const centerBottom = 'snackbar--centerBottom';
 
   return (
     <div className='App'>
@@ -30,6 +30,7 @@ function App() {
         handleClose={handleCloseBtn}
         handleClick={handleDisplaySnackbar}
         position={centerBottom}
+        type='snackbar--warning'
       />
     </div>
   );
