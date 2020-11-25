@@ -37,3 +37,12 @@
     font-size: 20px;
     color: white;
 }
+
+.active {
+    border-bottom: 2px solid red;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}

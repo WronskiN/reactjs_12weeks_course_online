@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { NavLink, BrowserRouter as Router } from 'react-router-dom';
 import { Button } from '../Button';
 import { NavList } from './';
 import './style.css';
@@ -19,12 +20,19 @@ function NavMenu({ handleClick, toggleStatus }) {
   return (
     <div className={toggle ? 'nav nav--open' : 'nav'}>
       <Button content='x' btnClass='btn--innerNav' handleClick={handleClick} />
-      <NavList>
-        <li>Home</li>
-        <li>About</li>
-        <li>Service</li>
-        <li>Contact</li>
-      </NavList>
+      <Router>
+        <NavList>
+          <NavLink to='/' exact className='link'>
+            Home
+          </NavLink>
+          <NavLink to='about' className='link'>
+            About
+          </NavLink>
+          <NavLink to='contact' className='link'>
+            Contact
+          </NavLink>
+        </NavList>
+      </Router>
     </div>
   );
 }
