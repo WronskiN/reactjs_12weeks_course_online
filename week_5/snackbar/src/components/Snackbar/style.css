@@ -1,0 +1,25 @@
+.snackbar--success {
+    width: 200px;
+    margin: 50px auto;
+    padding: 10px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+
+    position: relative;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.closeBtn {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+
+    position: absolute;
+    top: -50px;
+    right: 10px;
+}
