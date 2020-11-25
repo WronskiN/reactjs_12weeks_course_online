@@ -4,7 +4,14 @@ import './style.css';
 import Button from '../Button';
 
 function Snackbar(props) {
-  const { content, duration, snackbarStatus, handleClose, handleClick } = props;
+  const {
+    content,
+    duration,
+    snackbarStatus,
+    handleClose,
+    handleClick,
+    position,
+  } = props;
   const [snakbarState, setSnackbarState] = useState();
 
   useEffect(() => {
@@ -20,7 +27,7 @@ function Snackbar(props) {
   return (
     <>
       {snakbarState ? (
-        <div className='snackbar--success'>
+        <div className={`snackbar--success snackbar--${position}`}>
           <h2>{content}</h2>
           <Button
             buttonContent='x'

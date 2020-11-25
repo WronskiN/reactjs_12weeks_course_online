@@ -8,8 +8,14 @@ function App() {
   const [dispaySnackbar, setDisplaySnackbar] = useState(false);
 
   const handleDisplaySnackbar = () => setDisplaySnackbar(!dispaySnackbar);
-
   const handleCloseBtn = () => setDisplaySnackbar(false);
+
+  // const center = 'center';
+  // const topRight = 'topRight';
+  // const topLeft = 'topLeft';
+  // const bottomLeft = 'bottomLeft';
+  // const bottomRight = 'bottomRight';
+  const centerBottom = 'centerBottom';
 
   return (
     <div className='App'>
@@ -23,6 +29,7 @@ function App() {
         duration={5000}
         handleClose={handleCloseBtn}
         handleClick={handleDisplaySnackbar}
+        position={centerBottom}
       />
     </div>
   );
