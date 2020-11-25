@@ -1,4 +1,16 @@
-# Getting Started with Create React App
+# Navigation project
+
+Task:
+Write the NavMenu component that will appear on the left side of the application. The component will contain navigation links, it will be hidden.
+
+Embed a button in the application that will allow you to open the menu (first click) and close the menu (click a second time).
+
+Embed a similar button in NavMenu. When you click it, the menu will be hidden.
+
+Modification:
+Using React Router DOM, add several subpages: e.g. / home, / about, / contact. In NavMenu, use NavLink components to link to these subpages. If any of the pages is currently open, make the link in NavMenu underlined in red.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
