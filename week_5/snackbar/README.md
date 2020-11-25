@@ -1,4 +1,19 @@
-# Getting Started with Create React App
+# Snackbard project
+
+Task:
+Prepare the Snackbar component that will be displayed on the screen after clicking the button for a specified number of seconds (5 by default).
+It will be possible to change this number by propsy.
+
+Tips: See what such a component might look like based on the Material UI: <a>https://material-ui.com/components/snackbars/#customized-snackbars</a>
+
+Modification - 1
+Modify the Snackbar component so that you can pass a value through propsy that will determine its position on the screen. For example, center-bottom will display it centered at the bottom and top-right at the top right.
+
+Modification -2
+Modify the Snackbar component so that it assumes the type of displayed content and changes the background and font color based on that.
+You can use the colors from this example: <a>https://material-ui.com/components/snackbars/#customized-snackbars</a>
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
