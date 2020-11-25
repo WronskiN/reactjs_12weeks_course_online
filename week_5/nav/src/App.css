@@ -1,3 +1,18 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+}
+
+.btnDefault {
+  background-color: rgb(73, 6, 6);
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  padding: 5px;
+  margin: 20px auto 0;
 }
