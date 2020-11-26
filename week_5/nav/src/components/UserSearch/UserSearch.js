@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form } from '../Form';
 import { Input } from '../Input';
+import { Button } from '../Button';
 
 function UserSearch({ initialValue = '' }) {
   const [state, setState] = useState(initialValue);
@@ -24,6 +25,11 @@ function UserSearch({ initialValue = '' }) {
           placeholder='Name and surname'
           value={state}
           onChange={handleInputChange}
+        />
+        <Button
+          content='search'
+          btnClass='btnDefault'
+          handleClick={handleSubmit}
         />
       </Form>
     </div>
