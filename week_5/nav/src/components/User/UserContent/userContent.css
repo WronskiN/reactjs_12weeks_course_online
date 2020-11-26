@@ -5,6 +5,8 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
+    background-color: #fff;
 
-    color: white;
+    color: #000;
+    border-radius: 0 0 10px 10px;
 }

@@ -11,10 +11,10 @@
     display: block;
     width: 80px;
     height: 80px;
-    /* border: none; */
     border-radius: 50%;
     overflow: hidden;
 }
+
 
 .image {
     width: 100%;

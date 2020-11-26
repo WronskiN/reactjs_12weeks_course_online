@@ -2,6 +2,25 @@
     width: 80%;
     height: 400px;
     background-color: #061F49;
-    border: none;
+    border: 1px solid #061F49;
+    margin-bottom: 20px;
     border-radius: 10px;
+}
+
+@media(min-width: 768px) {
+    .user__card {
+        width: 40%;
+    }
+}
+
+@media(min-width: 1200px) {
+    .user__card {
+        width: 27%;
+    }
+}
+
+@media(min-width: 1440px) {
+    .user__card {
+        width: 21%;
+    }
 }
