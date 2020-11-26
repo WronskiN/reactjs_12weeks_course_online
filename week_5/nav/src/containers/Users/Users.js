@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { UserCard } from '../../components/User';
+import { UserSearch } from '../../components/UserSearch';
 import './users.css';
 
 // const URL = '../../../public/users.json';
@@ -7,7 +8,7 @@ import './users.css';
 function Users() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [items, setItems] = useState([]);
+  const [users, setUsers] = useState([]);
 
   const API_URL = 'https://randomuser.me/api/?results=10';
 
@@ -19,15 +20,16 @@ function Users() {
     setIsLoaded(true);
     const response = await fetch(API_URL);
     const data = await response.json();
-    setItems(data.results);
+    setUsers(data.results);
     return setIsLoaded(false);
   };
 
   return (
     <div className='section section__users'>
+      <UserSearch />
       <h2>users</h2>
-      {console.log(items)}
-      {items.map((user, index) => (
+      {console.log(users)}
+      {users.map((user, index) => (
         <UserCard
           key={`key-${index}`}
           name={user.name.first}
