@@ -2,13 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { UserCard } from '../../components/User';
 import './users.css';
 
-const URL = '../../../public/users.json';
+// const URL = '../../../public/users.json';
 
 function Users() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
-  const [users, setUsers] = useState([]);
 
   const API_URL = 'https://randomuser.me/api/?results=10';
 
