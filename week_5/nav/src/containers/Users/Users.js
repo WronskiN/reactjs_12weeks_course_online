@@ -2,17 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { UserSearch } from '../../components/UserSearch';
 import './users.css';
 import { UsersList } from '../../components/UsersList';
-import { UserCard } from '../../components/User';
+// import { UserCard } from '../../components/User';
 
 // const URL = '../../../public/users.json';
 
 function Users() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [users, setUsers] = useState([]);
-  const [value, setValue] = useState('');
+  const [filteredUsers, setFilteredUsers] = useState();
   const API_URL = 'https://randomuser.me/api/?results=10';
-
-  const data = [...users];
 
   const loadData = async () => {
     setIsLoaded(true);
@@ -30,20 +28,16 @@ function Users() {
     const newUser = data.filter((user) =>
       user.name.first.toLowerCase().includes(value)
     );
-    setUsers(newUser);
-    console.log(users);
+    setFilteredUsers(newUser);
+    console.log(newUser);
   };
 
   return (
     <div className='section section__users'>
-      <UserSearch
-        data={data}
-        filterUser={filterUser}
-        value={() => setValue(value)}
-      />
+      <UserSearch filterUser={filterUser} data={users} />
       <h2>users</h2>
-      <UsersList data={users}>
-        {users.map((user, index) => (
+      <UsersList data={users} filteredUser={filteredUsers} />
+      {/* {users.map((user, index) => (
           <UserCard
             key={`key-${index}`}
             name={user.name.first}
@@ -53,8 +47,7 @@ function Users() {
             phone={user.cell}
             photo={user.picture.medium}
           />
-        ))}
-      </UsersList>
+        ))} */}
     </div>
   );
 }
