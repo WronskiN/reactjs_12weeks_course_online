@@ -13,11 +13,16 @@
 .btnDefault {
   background-color: rgb(73, 6, 6);
   color: #fff;
-  font-size: 20px;
+  font-size: 16px;
   border: none;
   padding: 5px;
   margin: 20px auto 0;
   cursor: pointer;
+}
+
+.btn--reset {
+  background-color: red;
+  margin: 0 5px;
 }
 
 .section {

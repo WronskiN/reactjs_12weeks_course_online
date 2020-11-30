@@ -3,18 +3,23 @@ import { Form } from '../Form';
 import { Input } from '../Input';
 import { Button } from '../Button';
 
-function UserSearch({ initialValue = '' }) {
+function UserSearch({ initialValue = '', data, filterUser, value }) {
   const [state, setState] = useState(initialValue);
 
-  const handleInputChange = (e) => {
+  const handleChange = (e) => {
     const value = e.target.value;
-    setState((prevState) => value);
+    setState((prevState) => value.toLowerCase());
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(`sent ${state}`);
-    setState((prevState) => initialValue);
+    value(state);
+    filterUser(data, value);
+  };
+
+  const handleReset = () => {
+    setState('');
   };
 
   return (
@@ -24,12 +29,17 @@ function UserSearch({ initialValue = '' }) {
           type='text'
           placeholder='Name and surname'
           value={state}
-          onChange={handleInputChange}
+          onChange={handleChange}
         />
         <Button
           content='search'
           btnClass='btnDefault'
           handleClick={handleSubmit}
+        />
+        <Button
+          content='x'
+          btnClass='btnDefault btn--reset'
+          handleClick={handleReset}
         />
       </Form>
     </div>
