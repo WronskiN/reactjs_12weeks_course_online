@@ -4,6 +4,7 @@ import './App.css';
 import { NavMenu } from './components/NavMenu';
 import { Button } from './components/Button';
 import { Home, Users, About, Contact } from './containers';
+import { User } from './components/User';
 
 function App() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route path='/about'>
             <About />
+          </Route>
+          <Route path='/users/:id'>
+            <User />
           </Route>
           <Route path='/users'>
             <Users />

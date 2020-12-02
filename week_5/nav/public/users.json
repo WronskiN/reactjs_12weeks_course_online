@@ -29,7 +29,7 @@
       "registered": { "date": "2006-12-19T04:03:22.843Z", "age": 14 },
       "phone": "796-034-5594",
       "cell": "461-719-8162",
-      "id": { "name": "", "value": null },
+      "id": 1,
       "picture": {
         "large": "https://randomuser.me/api/portraits/women/68.jpg",
         "medium": "https://randomuser.me/api/portraits/med/women/68.jpg",
@@ -66,7 +66,7 @@
       "registered": { "date": "2018-11-17T23:16:16.733Z", "age": 2 },
       "phone": "061-157-7765",
       "cell": "081-479-6238",
-      "id": { "name": "PPS", "value": "8453446T" },
+      "id": 2,
       "picture": {
         "large": "https://randomuser.me/api/portraits/men/76.jpg",
         "medium": "https://randomuser.me/api/portraits/med/men/76.jpg",
@@ -100,7 +100,7 @@
       "registered": { "date": "2018-02-04T01:55:50.896Z", "age": 2 },
       "phone": "(107)-400-5492",
       "cell": "(862)-595-8847",
-      "id": { "name": "BSN", "value": "53275937" },
+      "id": 3,
       "picture": {
         "large": "https://randomuser.me/api/portraits/men/86.jpg",
         "medium": "https://randomuser.me/api/portraits/med/men/86.jpg",
@@ -137,7 +137,7 @@
       "registered": { "date": "2003-02-06T02:10:41.047Z", "age": 17 },
       "phone": "08-9452-6731",
       "cell": "0486-420-098",
-      "id": { "name": "TFN", "value": "073694570" },
+      "id": 4,
       "picture": {
         "large": "https://randomuser.me/api/portraits/men/38.jpg",
         "medium": "https://randomuser.me/api/portraits/med/men/38.jpg",
@@ -174,7 +174,7 @@
       "registered": { "date": "2003-12-12T21:13:14.092Z", "age": 17 },
       "phone": "078 833 64 78",
       "cell": "079 036 82 72",
-      "id": { "name": "AVS", "value": "756.8670.4571.40" },
+      "id": 5,
       "picture": {
         "large": "https://randomuser.me/api/portraits/women/83.jpg",
         "medium": "https://randomuser.me/api/portraits/med/women/83.jpg",
@@ -211,7 +211,7 @@
       "registered": { "date": "2010-10-16T19:41:09.078Z", "age": 10 },
       "phone": "05-55-83-62-60",
       "cell": "06-84-62-65-32",
-      "id": { "name": "INSEE", "value": "2NNaN36413285 37" },
+      "id": 6,
       "picture": {
         "large": "https://randomuser.me/api/portraits/women/84.jpg",
         "medium": "https://randomuser.me/api/portraits/med/women/84.jpg",
@@ -245,7 +245,7 @@
       "registered": { "date": "2016-05-19T16:51:13.383Z", "age": 4 },
       "phone": "079 167 03 33",
       "cell": "076 057 79 58",
-      "id": { "name": "AVS", "value": "756.5600.5545.98" },
+      "id": 7,
       "picture": {
         "large": "https://randomuser.me/api/portraits/men/53.jpg",
         "medium": "https://randomuser.me/api/portraits/med/men/53.jpg",
@@ -283,7 +283,7 @@
       "registered": { "date": "2019-05-25T07:59:23.308Z", "age": 1 },
       "phone": "075 539 43 40",
       "cell": "076 335 12 90",
-      "id": { "name": "AVS", "value": "756.1062.5975.14" },
+      "id": 8,
       "picture": {
         "large": "https://randomuser.me/api/portraits/women/96.jpg",
         "medium": "https://randomuser.me/api/portraits/med/women/96.jpg",
@@ -320,7 +320,7 @@
       "registered": { "date": "2011-07-18T20:47:24.166Z", "age": 9 },
       "phone": "004-70528111",
       "cell": "0967-051-1191",
-      "id": { "name": "", "value": null },
+      "id": 9,
       "picture": {
         "large": "https://randomuser.me/api/portraits/women/63.jpg",
         "medium": "https://randomuser.me/api/portraits/med/women/63.jpg",
@@ -357,7 +357,7 @@
       "registered": { "date": "2005-04-29T02:07:16.368Z", "age": 15 },
       "phone": "68384840",
       "cell": "92321123",
-      "id": { "name": "FN", "value": "09018415213" },
+      "id": 10,
       "picture": {
         "large": "https://randomuser.me/api/portraits/women/63.jpg",
         "medium": "https://randomuser.me/api/portraits/med/women/63.jpg",
@@ -365,11 +365,5 @@
       },
       "nat": "NO"
     }
-  ],
-  "info": {
-    "seed": "10c50fd9052cf30b",
-    "results": 10,
-    "page": 1,
-    "version": "1.3"
-  }
+  ]
 }

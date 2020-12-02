@@ -8,24 +8,26 @@ function UsersList({ data, filteredUser }) {
       {!filteredUser
         ? data.map((user, index) => (
             <UserCard
-              key={`key-${index}`}
+              key={user.id}
               name={user.name.first}
               surname={user.name.last}
               city={user.location.city}
               country={user.location.country}
               phone={user.cell}
               photo={user.picture.medium}
+              id={user.id}
             />
           ))
         : filteredUser.map((user, index) => (
             <UserCard
-              key={`key-${index}`}
+              key={user.id}
               name={user.name.first}
               surname={user.name.last}
               city={user.location.city}
               country={user.location.country}
               phone={user.cell}
               photo={user.picture.medium}
+              id={user.id}
             />
           ))}
     </div>
