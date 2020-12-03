@@ -2,20 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { UserCard } from '../';
 import { useParams } from 'react-router-dom';
 
-// fetch(URL)
-//   .then((response) => response.json())
-//   .then((data) => {
-//     const filteredUser = data.results.filter(
-//       (user) => user.id === parseInt(id, 10)
-//     );
-//     setUser(filteredUser);
-//     setIsLoaded(true);
-//   })
-//   .catch((error) => {
-//     setError(true);
-//     setIsLoaded(false);
-//   });
-
 const URL = '/users.json';
 
 function User() {
@@ -23,19 +9,24 @@ function User() {
   const [user, setUser] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setError] = useState(false);
-  console.log(typeof id);
 
   const uploadUser = async () => {
-    setIsLoaded(true);
-    const response = await fetch(URL);
-    const data = await response.json();
-    const filteredUser = data.results.filter(
-      (user) => user.id === parseInt(id, 10)
-    );
-    // setTimeout(() => setUser(filteredUser), 2000);
-    setUser(filteredUser);
-    // console.log(user);
-    // return setIsLoaded(!isLoaded);
+    try {
+      setIsLoaded(true);
+      const response = await fetch(URL);
+      if (response) {
+        const data = await response.json();
+        const filteredUser = data.results.filter(
+          (user) => user.id === parseInt(id, 10)
+        );
+        setUser(filteredUser[0]);
+      } else {
+        throw setError(true);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+    return setIsLoaded(false);
   };
 
   useEffect(() => {
@@ -44,10 +35,9 @@ function User() {
 
   return (
     <div className='section section__users'>
-      {console.log(`filtered user ${user}`)}
       {isLoaded && <p>Loading data</p>}
       {hasError && <p>Error occurred</p>}
-      {/* {user ? (
+      {user ? (
         <UserCard
           key={user.id}
           name={user.name.first}
@@ -60,7 +50,7 @@ function User() {
         />
       ) : (
         <p>Data is not ready</p>
-      )} */}
+      )}
     </div>
   );
 }
