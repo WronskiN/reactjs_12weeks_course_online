@@ -25,6 +25,11 @@
   margin: 0 5px;
 }
 
+.btn--return {
+  color: black;
+  background-color: transparent;
+}
+
 .section {
   width: 100%;
   min-height: 100vh;

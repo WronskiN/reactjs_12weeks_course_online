@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { UserCard } from '../';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 const URL = '/users.json';
 
@@ -38,16 +38,22 @@ function User() {
       {isLoaded && <p>Loading data</p>}
       {hasError && <p>Error occurred</p>}
       {user ? (
-        <UserCard
-          key={user.id}
-          name={user.name.first}
-          surname={user.name.last}
-          city={user.location.city}
-          country={user.location.country}
-          phone={user.cell}
-          photo={user.picture.medium}
-          id={id}
-        />
+        <>
+          <UserCard
+            key={user.id}
+            name={user.name.first}
+            surname={user.name.last}
+            city={user.location.city}
+            country={user.location.country}
+            phone={user.cell}
+            photo={user.picture.medium}
+            id={id}
+            returnBtn={true}
+          />
+          <Link to='/users' className='btnDefault btn--return'>
+            Back
+          </Link>
+        </>
       ) : (
         <p>Data is not ready</p>
       )}
