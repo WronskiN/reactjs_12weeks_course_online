@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+@import "https://unpkg.com/leaflet@1.7.1/dist/leaflet.css";
+
 .App {
   width: 100%;
   min-height: 100vh;
@@ -37,6 +39,7 @@ article {
   padding: 10px 5px;
 }
 
-.mapid {
-  height: 180px;
+.map {
+  width: 300px;
+  height: 200px;
 }
