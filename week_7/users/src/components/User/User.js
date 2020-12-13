@@ -9,7 +9,7 @@ function User({ user }) {
       <img src={user.picture.medium} alt='user profile' />
       <article>
         <h3>
-          <Link to='/'>
+          <Link to={`/user/${user.login.uuid}`}>
             {name
               ? `${user.name.first} ${user.name.last}`
               : 'The name was not found'}
