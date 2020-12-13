@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import User from '../User/User';
+import Map from '../Map/Map';
 
 function UserDetails({ users }) {
   const { id } = useParams();
@@ -12,6 +13,7 @@ function UserDetails({ users }) {
         <Link to='/'>Back Home</Link>
       </h4>
       <User user={user} />
+      <Map user={user} />
     </div>
   );
 }
