@@ -13,10 +13,12 @@ function App() {
   const [state, setState] = useState(false);
 
   useEffect(() => {
-    axios.get(URL).then((result) => {
-      setUsers(result.data.results);
-      setState(true);
-    });
+    setTimeout(() => {
+      axios.get(URL).then((result) => {
+        setUsers(result.data.results);
+        setState(true);
+      });
+    }, 1000);
   }, []);
 
   return (
