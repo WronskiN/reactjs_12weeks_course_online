@@ -14,7 +14,6 @@ function App() {
       setUsers(result.data.results);
     });
   }, []);
-  console.log(users);
 
   return (
     <div className='App'>

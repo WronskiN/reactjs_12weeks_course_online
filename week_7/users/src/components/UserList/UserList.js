@@ -8,7 +8,7 @@ function UserList({ users }) {
   return (
     <Router>
       <Switch>
-        <Route path='/user/:userId'>
+        <Route path='/user/:id'>
           <UserDetails users={usersList} />
         </Route>
         <Route path='/'>
