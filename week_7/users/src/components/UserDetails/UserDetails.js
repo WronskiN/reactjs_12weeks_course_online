@@ -6,9 +6,8 @@ import Map from '../Map/Map';
 function UserDetails({ users }) {
   const { id } = useParams();
   const user = users.filter((user) => user.login.uuid === id)[0];
-  console.log(user);
   return (
-    <div>
+    <div className='user__details'>
       <h4>
         <Link to='/'>Back Home</Link>
       </h4>
