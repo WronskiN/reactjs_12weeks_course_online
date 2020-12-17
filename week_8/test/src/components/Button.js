@@ -14,7 +14,7 @@ export default class Button extends React.Component {
     }
     return (
       <button onClick={this.handleClick}>
-        {this.props.label} {this.state.counter}
+        {this.props.label} <span>{this.state.counter}</span>
       </button>
     );
   }
