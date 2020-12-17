@@ -30,7 +30,6 @@ function Buttons(props) {
       <button onClick={handleDecrementButton}>-</button>
       <button onClick={handleIncrementButton}>+</button>
       <button onClick={handleResetButton}>Reset</button>
-      <p>{inputValue}</p>
     </div>
   );
 }
