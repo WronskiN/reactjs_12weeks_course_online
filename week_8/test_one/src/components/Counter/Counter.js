@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function Counter(props) {
-  const [counter, setCounter] = useState(props.start);
+  const [counter, setCounter] = useState(props.start === 10 ? props.start : 0);
   const [inputValue, setInputValue] = useState(0);
 
   const handleIncrementButton = () => {
@@ -26,10 +26,18 @@ function Counter(props) {
     <div>
       <p>Counter: {counter}</p>
       <input type='number' value={inputValue} onChange={handleInput} />
-      <button onClick={handleChangeButton}>Change</button>
-      <button onClick={handleDecrementButton}>-</button>
-      <button onClick={handleIncrementButton}>+</button>
-      <button onClick={handleResetButton}>Reset</button>
+      <button data-test='changeCounter' onClick={handleChangeButton}>
+        Change
+      </button>
+      <button data-test='decrement' onClick={handleDecrementButton}>
+        -
+      </button>
+      <button data-test='increment' onClick={handleIncrementButton}>
+        +
+      </button>
+      <button data-test='reset' onClick={handleResetButton}>
+        Reset
+      </button>
     </div>
   );
 }

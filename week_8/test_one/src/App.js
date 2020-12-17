@@ -7,7 +7,7 @@ function App() {
   return (
     <div className='App'>
       <Sum />
-      <Counter start={0} />
+      <Counter start={10} />
     </div>
   );
 }
