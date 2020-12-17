@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Buttons(props) {
+function Counter(props) {
   const [counter, setCounter] = useState(props.start);
   const [inputValue, setInputValue] = useState(0);
 
@@ -34,4 +34,4 @@ function Buttons(props) {
   );
 }
 
-export default Buttons;
+export default Counter;

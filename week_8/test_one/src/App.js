@@ -1,13 +1,13 @@
 import React from 'react';
 import Sum from './components/Sum/Sum';
-import Buttons from './components/Buttons/Buttons';
+import Counter from './components/Counter/Counter';
 import './App.css';
 
 function App() {
   return (
     <div className='App'>
       <Sum />
-      <Buttons start={0} />
+      <Counter start={0} />
     </div>
   );
 }
