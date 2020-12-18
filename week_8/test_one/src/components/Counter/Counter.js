@@ -12,7 +12,7 @@ function Counter(props) {
   };
   const handleInput = (e) => {
     const value = e.target.value;
-    setInputValue(value);
+    setInputValue(Number(value));
   };
   const handleChangeButton = () => {
     setCounter(inputValue);
