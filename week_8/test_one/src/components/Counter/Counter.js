@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 function Counter(props) {
   const [counter, setCounter] = useState(props.start === 10 ? props.start : 0);
-  const [inputValue, setInputValue] = useState(0);
+  const [inputValue, setInputValue] = useState();
 
   const handleIncrementButton = () => {
     setCounter(counter + 1);
