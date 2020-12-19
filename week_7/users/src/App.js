@@ -6,7 +6,8 @@ import UserList from './components/UserList/UserList';
 import ReactPlaceholder from 'react-placeholder';
 import 'react-placeholder/lib/reactPlaceholder.css';
 
-const URL = 'https://randomuser.me/api/?results=10';
+const NUMBER_OF_USERS = 10;
+const URL = `https://randomuser.me/api/?results=${NUMBER_OF_USERS}`;
 
 function App() {
   const [users, setUsers] = useState([]);
