@@ -12,11 +12,11 @@ function Counter(props) {
   };
   const handleInput = (e) => {
     const value = e.target.value;
-    setInputValue(Number(value));
+    setInputValue(value);
   };
   const handleChangeButton = () => {
-    setCounter(inputValue);
-    setInputValue(0);
+    setCounter(Number(inputValue));
+    setInputValue('');
   };
   const handleResetButton = () => {
     setCounter(props.start);
