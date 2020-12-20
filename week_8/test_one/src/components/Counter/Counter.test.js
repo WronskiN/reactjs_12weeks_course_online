@@ -27,22 +27,27 @@ describe('Counter component', () => {
     expect(counter.text()).toBe('Counter: 11');
   });
   it('Should decrement after "decrement" btn is clicked', () => {
-    const component = shallow(<Counter start={10} />);
+    let component = shallow(<Counter start={10} />);
     component.find('button[data-test="decrement"]').simulate('click');
     const counter = component.find('p');
     expect(counter.text()).toBe('Counter: 9');
   });
   it('Change btn should change counter value with input value', () => {
     const component = shallow(<Counter />);
-    component.find('button[data-test="changeCounter"]').simulate('click');
-    const input = component.find('input').prop('value');
+    const input = component.find('input');
+    input.simulate('change', { target: { value: '200' } });
+
+    const button = component.find('button[data-test="changeCounter"]');
+    button.simulate('click');
+
     const counter = component.find('p');
 
-    expect(counter.text()).toBe(`Counter: ${input}`);
+    expect(counter.text()).toBe('Counter: 200');
   });
   it('Reset btn should reset counter value to initial value', () => {
     const props = { start: 10 };
     const component = shallow(<Counter {...props} />);
+    component.find('button[data-test="decrement"]').simulate('click');
     component.find('button[data-test="reset"]').simulate('click');
     const counter = component.find('p');
 
