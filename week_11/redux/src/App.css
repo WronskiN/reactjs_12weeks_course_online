@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100vw;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: gray;
+  color: white;
+}
+
+nav {
+  width: 40%;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+a:hover {
+  color: black;
+}
+
+.userList {
+  display: flex;
+  flex-direction: column;
+}
+
+.userList__item {
+  margin: 1rem 0;
+  font-weight: 700;
+}
+
+.button__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+}
+
+button {
+  padding: 10px;
+}
